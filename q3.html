@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Shoe Shopping - Sign Up</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+header, nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color:  #00A4D3;
+            color: #fff;
+            padding: 10px 20px;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+        nav ul li {
+            margin-right: 20px;
+            border-right: 1px solid black; width:150px;
+            color: #fff;
+    
+}
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s; /* Add transition for background-color and color */
+}
+
+
+nav ul li a:hover {
+    background-color: #555; /* Change background color on hover */
+    color: green; /* Change font color on hover */
+}
+            
+    
+        
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .search-container {
+            display: flex;
+            align-items: center; /* Align items vertically */
+            margin-left: 20px; 
+        }
+        .search-container input[type=text] {
+            padding: 8px;
+            border: none;
+            border-radius: 10px;
+            margin-right: 10px; 
+        }
+        .search-container button {
+            padding: 8px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+.container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+h2 {
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input, select, button, label {
+    margin-bottom: 10px;
+    padding: 8px;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+button:hover {
+    background-color: #0056b3;
+}
+footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            margin-bottom: -80px;
+        }
+</style>
+<body>
+    <header>
+        <img src="pic2.png" style="width: 100px; height: 100px; border-radius: 50%;">
+        <div class="search-container">
+            <input type="text" placeholder="Search..">
+            <button type="submit" style="margin-right: 10px;">Search</button>
+        </div>
+        <nav style="background-color: #444444;">
+            <ul>
+                <li><a href="q15.html">BRANDS</a></li>
+                <li><a href="q14.html">WOMEN</a></li>
+                <li><a href="q8.html">MEN</a></li>
+                <li><a href="q11.html">KIDS</a></li>
+                <li><a href="addcard.html">ADD CARD</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <h2>Sign Up</h2>
+        <form id="signup-form">
+            <input type="text" id="first-name" placeholder="First name" required>
+            <input type="text" id="last-name" placeholder="Last name" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <div id="emailError" class="error"></div>
+            <input type="password" id="password" placeholder="Password" required>
+           
+            <select id="country" required>
+                <option>Select your country</option>
+                <option>Canada</option>
+                <option>Spain</option>
+                <option>India</option>
+                <option>New york</option>
+                
+            </select>
+            <input type="password" id="confirm-password" placeholder="Confirm Password" required>
+            <label>
+                <input type="checkbox" id="agree" required>
+                I agree to the Terms of Service and Privacy Policy
+            </label>
+            <button type="button" onclick="vform()">Sign Up</button>
+        </form>
+        <p>Already Registered? <a href="q4.html">Sign in</a></p>
+    </div>
+    <footer>
+        <p>&copy; 2024 Shoe Store</p>
+        <p>Contact us: 
+            <img src="pic3.png" style="width: 30px; height: 30px;"> 8333 Rue David Boyer, QC |
+            <img src="pic4.png" style="width: 50px; height: 50px; margin-top: -10px;"> Harpreet@gmail.com |
+            <img src="pic5.png" style="width: 30px; height: 30px;"> +1 4168880079
+        </p>
+    </footer>
+
+    <script>
+      
+     
+    document.getElementById('signup-form').addEventListener('submit', function(event) {
+        event.preventDefault();
+    });
+
+    function vform() {
+        var eInput = document.getElementById('email');
+        var eError = document.getElementById('emailError');
+        var e = eInput.value;
+
+        var ePattern = /^[\w.-]+@[a-zA-Z\d.-]+\.[a-zA-z]{2,}$/;
+
+        if (ePattern.test(e)) {
+          
+            window.location.href = "q20.html"; 
+        } else {
+            
+            eError.textContent = 'Invalid Email';
+            eError.style.color = 'orange';
+        }
+    }
+
+
+</script>
+    </script>
+</body>
+</html>
