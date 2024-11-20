@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header,
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #00A4D3;
+            color: white;
+            padding: 10px 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-right: 20px;
+            border-right: 1px solid black;
+            width: 150px;
+            color: white;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            transition: background-color 0.4s, color 0.4s;
+        }
+
+        nav ul li a:hover {
+            background-color: #555;
+            color: green;
+        }
+
+        .searchbar {
+            display: flex;
+            align-items: center;
+            margin-left: 20px;
+        }
+
+        .searchbar input {
+            padding: 7px;
+            border: none;
+            border-radius: 10px;
+            margin-right: 10px;
+        }
+
+        .searchbar button {
+            padding: 7px 14px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .product-details {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .i {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 400px;
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .t img {
+            max-width: 120%;
+            height: 180px;
+        }
+
+        .inf h2,
+        .inf p,
+        .color h1,
+        .q h1,
+        .size h1 {
+            font-size: 14px;
+            margin: 0;
+        }
+
+        .color input[type="color"] {
+            width: 50px;
+        }
+
+        .q input,
+        .size input {
+            width: 30px;
+            text-align: center;
+            border: 1px solid #ccc;
+            padding: 3px;
+            margin: 0;
+        }
+
+        .buttons .d-btn,
+        .buy {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 3px 10px;
+            cursor: pointer;
+            font-size: 14px;
+            justify-content: space-between;
+            margin-left: -50px;
+        }
+
+        .buy {
+            background-color: green;
+
+        }
+
+        .color,
+        .q,
+        .size {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="pic2.png" style="width: 100px; height: 100px; border-radius: 50%;">
+        <div class="searchbar">
+            <input type="text" placeholder="Search..">
+            <button type="submit" style="margin-right: 10px;">Search</button>
+        </div>
+        <nav style="background-color: #444444;">
+            <ul>
+                <li><a href="q15.html">BRANDS</a></li>
+                <li><a href="q14.html">WOMEN</a></li>
+                <li><a href="q8.html">MEN</a></li>
+                <li><a href="q11.html">KIDS</a></li>
+                <li><a href="addcard.html?image=pic6.png&price=300&description=NIKE">ADD CARD</a></li>
+
+            </ul>
+    </header>
+
+    <div class="product-details">
+        <div class="i">
+            <div class="t">
+                <img src="" id="pimage" style="margin-right: 370px;">
+
+            </div><br>
+            <div class="inf">
+                <h2 id="pname" style="margin-right: 370px;"></h2>
+                <p id="pprice"></p>
+            </div><br>
+            <div class="color">
+                <h1>Color:</h1>
+                <input type="color" value="#000000">
+            </div>
+            <div class="q">
+                <h1>Quantity:</h1>
+                <select>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                    <option>11</option>
+                    <option>12</option>
+
+                </select>
+            </div>
+            <div class="size">
+                <h1>Size:</h1>
+                <select>
+
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                    <option>11</option>
+                    <option>12</option>
+
+                </select>
+            </div><br>
+            <div class="buttons">
+                <button type="button" class="d-btn" id="rbtn">Remove</button> <br><br>
+                <div class="m">
+                    <a href="payment.html">
+                        <button type="button" class="buy"
+                            style="width: 250px; height: 40px; margin-left: 40px">Buy</button>
+
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <footer>
+        <p>&copy; 2024 Shoe Store</p>
+    </footer>
+
+    <script>
+        let main = new URLSearchParams(window.location.search);
+        let image = main.get('image');
+        let price = main.get('price');
+        let description = main.get('description');
+        document.getElementById('pimage').src = image;
+        document.getElementById('pname').textContent = description;
+        document.getElementById('pprice').textContent = 'Price: $' + price;
+        document.getElementById('rbtn').addEventListener('click', function (page) {
+            page.preventDefault();
+            document.getElementById('pimage').src = '';
+            document.getElementById('pname').textContent = '';
+            document.getElementById('pprice').textContent = '';
+            window.location.href = 'blank.html';
+        });
+
+
+        $('.buy').on('click', function () {
+            window.location.href = 'next_page.html';
+        });
+
+    </script>
+</body>
+
+</html>
