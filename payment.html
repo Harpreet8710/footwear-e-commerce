@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        header,
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #00A4D3;
+            color: white;
+            padding: 10px 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-right: 20px;
+            border-right: 1px solid black;
+            width: 150px;
+            color: white;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            transition: background-color 0.4s, color 0.4s;
+        }
+
+        nav ul li a:hover {
+            background-color: #555;
+            color: green;
+        }
+
+        .main {
+            display: flex;
+            justify-content: center;
+            width: 500px;
+            padding: 20px;
+            background: rgb(242, 229, 242);
+            margin-left: 400px;
+            margin-top: 15px;
+        }
+
+        .searchbar {
+            display: flex;
+            align-items: center;
+            margin-left: 20px;
+        }
+
+        .searchbar input {
+            padding: 7px;
+            border: none;
+            border-radius: 10px;
+            margin-right: 10px;
+        }
+
+        .searchbar button {
+            padding: 7px 14px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .t {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .m {
+            font-size: 20px;
+            color: orangered;
+            padding-bottom: 5px;
+        }
+
+        .p {
+            margin: 10px;
+        }
+
+        .p label {
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .p select {
+            width: 100%;
+            height: 20%;
+            border: 1px solid black;
+            padding: 5px;
+            font-size: 14px;
+        }
+
+        .p img {
+            width: 50px;
+            height: 34px;
+            margin-top: 5px;
+        }
+
+        .submit_btn {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            background: green;
+            color: #fff;
+            margin-top: 5px;
+            cursor: pointer;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="pic2.png" style="width: 100px; height: 100px; border-radius: 50%;">
+        <div class="searchbar">
+            <input type="text" placeholder="Search..">
+            <button type="submit" style="margin-right: 10px;">Search</button>
+        </div>
+        <nav style="background-color: #444444;">
+            <ul>
+                <li><a href="q15.html">BRANDS</a></li>
+                <li><a href="q14.html">WOMEN</a></li>
+                <li><a href="q8.html">MEN</a></li>
+                <li><a href="q11.html">KIDS</a></li>
+                <li><a href="addcard.html">ADD CARD</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="main">
+        <form id="check" action="tracking.html">
+            <div class="t">
+                <div class="i">
+                    <h2 class="m">Add your details</h2>
+                    <div class="p">
+                        <label>Email:</label>
+                        <input type="email" name="email" placeholder="Enter email address"
+                            style="width: 180px; height: 30px;" required>
+                    </div>
+                    <div class="p">
+                        <label>Full Name:</label>
+                        <input type="text" name="fname" placeholder="Enter your full name"
+                            style="width: 180px; height: 30px;" required>
+                    </div>
+
+                    <div class="p">
+                        <label>Address:</label>
+                        <input type="text" name="addr" placeholder="Enter your address"
+                            style="width: 180px; height: 30px;" required>
+                    </div>
+                    <div class="p">
+                        <label>City:</label>
+                        <input type="text" name="city" placeholder="Enter your city" style="width: 180px; height: 30px;"
+                            required>
+                    </div>
+                    <div class="p">
+                        <label>Phone Number:</label>
+                        <input type="text" name="phon" placeholder="Enter your phone number"
+                            style="width: 180px; height: 30px;" required>
+                    </div>
+                    <div class="p">
+                        <label>State:</label>
+                        <input type="text" name="sta" placeholder="Enter your state" style="width: 180px; height: 30px;"
+                            required>
+                    </div>
+                    <div class="p">
+                        <label>Postal Code:</label>
+                        <input type="text" name="pcode" placeholder="H8N 1Z9" style="width: 180px; height: 30px;"
+                            required>
+                    </div>
+                </div>
+                <div class="i">
+                    <h2 class="m">Payment Method</h2>
+                    <div class="p">
+                        <label>Accepted Card:</label>
+                        <img src="pic89.jpg" style="width: 200px; height: 80px;">
+                    </div>
+                    <div class="p">
+                        <label>Cardholder Name:</label>
+                        <input type="text" name="cname" placeholder="Enter cardholder name"
+                            style="width: 180px; height: 30px;" required>
+                    </div>
+                    <div class="p">
+                        <label>Card Number:</label>
+                        <input type="text" name="cnumber" placeholder="Enter your card number"
+                            style="width: 180px; height: 30px;" required>
+                    </div>
+                    <div class="p">
+                        <label>Exp Date Month:</label>
+                        <select>
+                            <option value="">Choose month</option>
+                            <option value="Jan">Jan</option>
+                            <option value="Feb">Feb</option>
+                            <option value="Mar">Mar</option>
+                            <option value="Apr">Apr</option>
+                            <option value="May">May</option>
+                            <option value="Jun">Jun</option>
+                            <option value="Jul">Jul</option>
+                            <option value="Aug">Aug</option>
+                            <option value="Sep">Sep</option>
+                            <option value="Oct">Oct</option>
+                            <option value="Nov">Nov</option>
+                            <option value="Dec">Dec</option>
+                        </select>
+                    </div>
+                    <div class="p">
+                        <label>Exp Date Year:</label>
+                        <select name="expyear">
+                            <option value="">Choose Year</option>
+                            <option value="2025">2025</option>
+                            <option value="2026">2026</option>
+                            <option value="2027">2027</option>
+                            <option value="2028">2028</option>
+                            <option value="2029">2029</option>
+                        </select>
+                    </div>
+                    <div class="p">
+                        <label>CVV:</label>
+                        <input type="number" name="cvv" placeholder="123" style="width: 180px; height: 30px;" required>
+                    </div>
+                </div>
+            </div>
+            <input type="submit" value="Payment Now" class="submit_btn">
+        </form>
+    </div>
+    <footer style="height: 30px;">
+        <p>&copy; 2024 Shoe Store</p>
+    </footer>
+    <script>
+        document.card('please', function () {
+            let t = document.getElementById('check');
+            t.card('submit', function (page) {
+                page.preventDefault();
+                window.location.href = 'tracking.html';
+            });
+        });
+    </script>
+</body>
+
+</html>
